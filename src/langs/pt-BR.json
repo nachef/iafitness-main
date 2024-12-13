@@ -1,0 +1,292 @@
+{
+  "translation": {
+    "header": {
+      "home": "Início",
+      "about-us": "Sobre nós",
+      "services": "Serviços",
+      "contacts": "Contato"
+    },
+    "main": {
+      "title": "O futuro do seu corpo está aqui.",
+      "description": "Sem enrolação e sem desculpas. A inteligência artificial que vai te ajudar a alcançar o corpo e a mente dos seus sonhos.",
+      "how-works-section": {
+        "title": "São apenas três passos pra seu corpo dos sonhos",
+        "description": "Faça sua imaganação virar realidade com esses três passos.",
+        "process-button": "Como funciona?",
+        "card1title": "Formulário",
+        "card2title": "Plano",
+        "card3title": "Site",
+        "card1": "Siga as etapas e preencha os campos necessários.",
+        "card2": "Escolha o plano que mais se encaixa com seu objetivo.",
+        "card3": "Receba um site exclusivo. Sim, o site será 100% seu!"
+      },
+      "features-section": {
+        "title": "Descubra nossa gama de serviços",
+        "description": "Nós oferecemos uma variedade de serviços para atender às suas necessidades e objetivos. Temos a solução certa para você!",
+        "features-button": "Serviços",
+        "cards": [
+          {
+            "title": "Planilhas de Treino Personalizadas",
+            "description": "Criamos planilhas de treino sob medida utilizando inteligência artificial, adaptadas aos seus objetivos, seja ganho de massa muscular, emagrecimento ou condicionamento físico."
+          },
+          {
+            "title": "Protocolos de Emagrecimento",
+            "description": "Oferecemos protocolos especializados para perda de peso, combinando treinos aeróbicos e musculação para garantir que você atinja seus objetivos de forma eficiente e saudável."
+          },
+          {
+            "title": "Treinamento de condicionamento físico",
+            "description": "Desenvolvemos fichas focadas em condicionamento físico, com exercícios variados para melhorar sua resistência, força e flexibilidade."
+          },
+          {
+            "title": "Treinamento para disfunções sexuais",
+            "description": "Nosso serviço de treinamento especializado em disfunções sexuais visa melhorar a saúde sexual e o desempenho, com exercícios específicos para tratar disfunções como a disfunção erétil."
+          },
+          {
+            "title": "Treino para Hipertrofia",
+            "description": "Montamos treinos específicos para hipertrofia muscular, com ciclos de progressão e cargas personalizadas para garantir resultados consistentes no ganho de massa muscular."
+          },
+          {
+            "title": "Dietas exclusivas com IA",
+            "description": "Utilizamos inteligência artificial para criar dietas personalizadas, adaptadas às suas necessidades nutricionais e objetivos, garantindo uma alimentação equilibrada e saudável."
+          }
+        ]
+      },
+      "achievements": {
+        "created": "+ de 2000 fichas baixadas",
+        "clients": "+ de 1000 clientes ativos",
+        "workout": "+ de 5000 treinos realizados"
+      }
+    },
+    "generate-page": {
+      "tooltip": {
+        "title": "Seu IMC é de:",
+        "bmi": "IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa. "
+      },
+      "inputs-title": {
+        "name": "Nome *",
+        "email": "E-mail (válido para receber o site)*",
+        "cpf": "CPF *",
+        "age": "Idade *",
+        "sex": "Sexo *",
+        "weight": "Peso (kg)*",
+        "height": "Altura (cm)*",
+        "training-type": "Local de treino *",
+        "muscle-group": "Grupo muscular",
+        "personal-goal": "Objetivo *",
+        "training-days": "Dias de treino *",
+        "muscle-mass": "Hipertrofia",
+        "pain-relief": "Tratar dores",
+        "weight-loss": "Emagrecimento",
+        "physical-conditioning": "Condicionamento",
+        "generate-button": "Gerar ficha"
+      },
+      "inputs-placeholder": {
+        "name": "Digite seu nome",
+        "email": "Digite seu e-mail",
+        "cpf": "Digite seu CPF",
+        "name-pelvic-dysfunction": "Digite seu nome (relaxa, é confidencial)",
+        "age": "Digite sua idade",
+        "sex": "Selecione seu sexo",
+        "weight": "Digite seu peso",
+        "height": "Digite sua altura",
+        "training-type": "Selecione o local de treino",
+        "muscle-group": "Músculo a priorizar",
+        "muscle-group-pain": "Área dolorida"
+      },
+      "radio-options": {
+        "male": "Masculino",
+        "female": "Feminino",
+        "no-answer": "Prefiro não informar",
+        "home": "Casa",
+        "gym": "Academia",
+        "chest": "Peito",
+        "back": "Costas",
+        "shoulders": "Ombros",
+        "biceps": "Bíceps",
+        "triceps": "Tríceps",
+        "legs": "Pernas",
+        "calves": "Panturrilhas",
+        "abs": "Abdômen",
+        "glutes": "Glúteos",
+        "weight-loss": "Emagrecimento",
+        "muscle-mass": "Hipertrofia",
+        "pain-relief": "Tratar dores",
+        "physical-conditioning": "Condicionamento",
+        "pelvic-dysfunction": "Disfunção erétil",
+        "one-day": "1",
+        "two-days": "2",
+        "three-days": "3",
+        "four-days": "4",
+        "five-days": "5",
+        "six-days": "6",
+        "abductors": "Abdutores",
+        "adductors": "Adutores",
+        "cardiovascular-system": "Sistema cardiovascular",
+        "delts": "Deltoides",
+        "forearms": "Antebraços",
+        "hamstrings": "Posteriores de coxa",
+        "lats": "Dorsais",
+        "levator-scapulae": "Levantador da escápula",
+        "pectorals": "Peitorais",
+        "quads": "Quadríceps",
+        "serratus-anterior": "Serrátil anterior",
+        "spine": "Coluna",
+        "traps": "Trapézio",
+        "upper-back": "Parte superior das costas"
+      },
+      "pain-relief-options": {
+        "back": "Costas",
+        "chest": "Peito",
+        "lower-arms": "Antebraços",
+        "lower-legs": "Panturrilhas",
+        "neck": "Pescoço",
+        "shoulders": "Ombros",
+        "upper-arms": "Braços",
+        "upper-legs": "Coxas",
+        "waist": "Cintura"
+      },
+      "payment": {
+        "modal": {
+          "title": "Pagamento",
+          "tooltip": "Nosso pagamento é 100% seguro, para proteger suas informações financeiras não armazenamos dados de cartão de crédito e nem de transações Pix."
+        }
+      },
+      "steps": {
+        "step2": "Planos",
+        "step3": "Pagamento"
+      }
+    },
+    "plans": {
+      "base": "Base",
+      "baseDescription": "Plano básico para disfunção pelvica.",
+      "performance": "Performance",
+      "performanceDescription": "Plano avançado para disfunção pelvica.",
+      "master": "Master",
+      "masterDescription": "Plano completo para disfunção pelvica.",
+      "simple": "Simples",
+      "simpleDescription": "Você paga uma única vez, porém caso queira outra ficha, terá que comprar novamente.",
+      "athlete": "Atleta",
+      "athleteDescription": "Você paga uma única vez, e recebe uma dieta juntamente com o seu treino.",
+      "pro": "Pro",
+      "proDescription": "Você paga uma única vez, e semanalmente, você receberá uma nova ficha.",
+      "termsAndConditions": "Consulte nossos termos e condições de uso."
+    },
+    "options": {
+      "recommended": "Recomendado",
+      "comingSoon": "Em breve",
+      "choose": "Escolher",
+      "exclusiveSite": "Recebe um site exclusivo.",
+      "specializedDiet": "Dieta especializada para você.",
+      "weeklyAutomaticDelivery": "Envio semanal automático.",
+      "executionGIFs": "GIFs de execuções.",
+      "moreThan28Exercises": "+ de 28 exercícios inclusos.",
+      "moreThan18Exercises": "+ de 18 exercícios inclusos.",
+      "moreThan12Exercises": "+ de 12 exercícios inclusos."
+    },
+    "about-section": {
+      "description-1": "Fundada em 2024, nossa empresa nasceu da paixão por esportes e pela visão de criar um ambiente de apoio e orientação para quem deseja começar na academia. Inspirados por atletas e motivados a preencher a lacuna de auxílio para iniciantes, desenvolvemos um sistema único de fichas e protocolos de treinamento especializados, utilizando a inteligência artificial como aliada.",
+      "description-2": "Nosso objetivo é oferecer treinos personalizados, adaptados às necessidades e metas de cada usuário, independentemente do seu nível de experiência. Queremos tornar o caminho para a saúde e o bem-estar acessível e eficaz, proporcionando um suporte contínuo e ajustado à evolução de cada pessoa."
+    },
+    "payment-step" : {
+      "revise-infos" : "Revise os dados antes de prosseguir"
+    },
+    "services-section": {
+      "title": "Nossos serviços",
+      "cards": [
+        {
+          "title": "Planilhas de Treino Personalizadas",
+          "description": "Criamos planilhas de treino sob medida utilizando inteligência artificial, adaptadas aos seus objetivos, seja ganho de massa muscular, emagrecimento ou condicionamento físico. Cada plano é ajustado conforme sua evolução e metas."
+        },
+        {
+          "title": "Protocolos de Emagrecimento",
+          "description": "Oferecemos protocolos especializados para perda de peso, combinando treinos aeróbicos e musculação para garantir que você atinja seus objetivos de forma eficiente e saudável."
+        },
+        {
+          "title": "Treinamento de condicionamento físico",
+          "description": "Desenvolvemos fichas focadas em condicionamento físico, com exercícios variados para melhorar sua resistência, força e flexibilidade, proporcionando um treino completo e eficaz."
+        },
+        {
+          "title": "Treinamento para disfuncões sexuais",
+          "description": "Nosso serviço de treinamento especializado em disfunções sexuais visa melhorar a saúde sexual e o desempenho, com exercícios específicos para tratar disfunções como a disfunção erétil."
+        },
+        {
+          "title": "Treino para Hipertrofia",
+          "description": "Montamos treinos específicos para hipertrofia muscular, com ciclos de progressão e cargas personalizadas para garantir resultados consistentes no ganho de massa muscular."
+        },
+        {
+          "title": "Dietas exclusivas com IA",
+          "description": "Utilizamos inteligência artificial para criar dietas personalizadas, adaptadas às suas necessidades nutricionais e objetivos, garantindo uma alimentação equilibrada e saudável."
+        }
+      ]
+    },
+    
+    "opinions-section": {
+      "title": "O que acham dos nossos serviços",
+      "cards": [
+        "A IA personaliza meus treinos e os resultados são incríveis!",
+        "Melhorei minha saúde e autoestima com os treinos personalizados.",
+        "Os protocolos de emagrecimento me ajudaram a atingir minhas metas rapidamente.",
+        "As fichas de treino são detalhadas e perfeitas para hipertrofia.",
+        "Nunca tive um treino tão organizado! Recomendo!"
+      ]
+    },
+    "confirmed-screen" : {
+      "title" : "Parabéns!",
+      "email": "Seu site exclusivo também será enviado para o email cadastrado.",
+      "visit-site": "Acessar site"
+    },
+    "training-site" : {
+      "loading": "Carregando...",
+      "hello": "Olá",
+      "myExercises": "Meus exercícios",
+      "myDiet": "Minha dieta",
+      "myInfo": "Minhas informações",
+      "exercises": "Exercícios",
+      "diet": "Dieta",
+      "info": "Informações",
+      "day": "Dia",
+      "noDietContent": "Nenhum conteúdo de dieta disponível.",
+      "name": "Nome",
+      "age": "Idade",
+      "height": "Altura",
+      "weight": "Peso",
+      "bmi": "IMC",
+      "buttons": {
+        "reload-button": "Recarregar GIFs"
+      },
+      "filters": {
+        "muscleFilter": "Filtro por músculo",
+        "exerciseFilter": "Filtro por exercício"
+      },
+      "dietSection" : {
+        "title": "Dieta",
+        "recommended": "Recomendações",
+        "noRecommended": "Nenhuma recomendação disponível.",
+        "mealExample": "Exemplo de Refeição",
+        "noMealExample": "Nenhum exemplo de refeição disponível.",
+        "mainDish": "Principais Alimentos",
+        "noMainDish": "Nenhum alimento principal disponível."
+      },
+      "exercise": {
+        "series": "Séries",
+        "repetitions": "Repetições",
+        "rest": "Descanso",
+        "gifError": "GIFs podem expirar, clique no botão para recarregar."
+      }
+    },
+    "discord-section": {
+      "title": "Acesse nossa comunidade",
+      "description": "Por aqui você consegue interagir, entrar em contato e também disponibilizamos conteúdos grátis.",
+      "button": "Acessar"
+    },
+    "contacts-section": {
+      "title": "Entrar em contato",
+      "description": "Está precisando de algum dos serviços que oferecemos ou quer somente dar um oi? Nossa caixa de entrada está aberta para você, vamos dar nosso melhor para respondê-lo!",
+      "button": "Marcar cafézinho"
+    },
+    "footer": {
+      "copyrights": "Todos os direitos reservados a Intelligence Fit.",
+      "support": "Suporte"
+    }
+  }
+}

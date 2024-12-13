@@ -1,0 +1,267 @@
+{
+  "translation": {
+    "header": {
+      "home": "Home",
+      "about-us": "About Us",
+      "services": "Services",
+      "contacts": "Contact"
+    },
+    "main": {
+      "title-1": "The future of",
+      "title-2": "your body",
+      "title-3": "is here.",
+      "description": "We are a company specialized in personalized training in general, using artificial intelligence to create sheets and protocols adapted to the individual needs of each user.",
+      "buttons": {
+        "service-button": "View Services",
+        "generate-button": "Let's start",
+        "send-informations": "Next"
+      },
+      "achievements": {
+        "created": "+ than 2000 sheets downloaded",
+        "clients": "+ than 1000 active clients",
+        "workout": "+ than 5000 workouts performed"
+      }
+    },
+    "generate-page": {
+      "tooltip": {
+        "title": "Your BMI is:",
+        "bmi": "BMI stands for Body Mass Index, a parameter adopted by the World Health Organization to calculate the ideal weight for each person."
+      },
+      "inputs-title": {
+        "name": "Name *",
+        "email": "Email (valid to receive the site)*",
+        "cpf": "CPF *",
+        "age": "Age *",
+        "sex": "Sex *",
+        "weight": "Weight (kg)*",
+        "height": "Height (cm)*",
+        "training-type": "Training location *",
+        "muscle-group": "Muscle group",
+        "personal-goal": "Goal *",
+        "training-days": "Training days *",
+        "muscle-mass": "Hypertrophy",
+        "pain-relief": "Pain relief",
+        "weight-loss": "Weight loss",
+        "physical-conditioning": "Physical conditioning",
+        "generate-button": "Generate sheet"
+      },
+      "inputs-placeholder": {
+        "name": "Enter your name",
+        "email": "Enter your email",
+        "cpf": "Enter your CPF",
+        "name-pelvic-dysfunction": "Enter your name (relax, it's confidential)",
+        "age": "Enter your age",
+        "sex": "Select your sex",
+        "weight": "Enter your weight",
+        "height": "Enter your height",
+        "training-type": "Select the training location",
+        "muscle-group": "Muscle to prioritize",
+        "muscle-group-pain": "Painful area"
+      },
+      "radio-options": {
+        "male": "Male",
+        "female": "Female",
+        "no-answer": "Prefer not to say",
+        "home": "Home",
+        "gym": "Gym",
+        "chest": "Chest",
+        "back": "Back",
+        "shoulders": "Shoulders",
+        "biceps": "Biceps",
+        "triceps": "Triceps",
+        "legs": "Legs",
+        "calves": "Calves",
+        "abs": "Abs",
+        "glutes": "Glutes",
+        "weight-loss": "Weight loss",
+        "muscle-mass": "Hypertrophy",
+        "pain-relief": "Pain relief",
+        "physical-conditioning": "Physical conditioning",
+        "pelvic-dysfunction": "Erectile dysfunction",
+        "one-day": "1",
+        "two-days": "2",
+        "three-days": "3",
+        "four-days": "4",
+        "five-days": "5",
+        "six-days": "6",
+        "abductors": "Abductors",
+        "adductors": "Adductors",
+        "cardiovascular-system": "Cardiovascular system",
+        "delts": "Deltoids",
+        "forearms": "Forearms",
+        "hamstrings": "Hamstrings",
+        "lats": "Lats",
+        "levator-scapulae": "Levator scapulae",
+        "pectorals": "Pectorals",
+        "quads": "Quads",
+        "serratus-anterior": "Serratus anterior",
+        "spine": "Spine",
+        "traps": "Traps",
+        "upper-back": "Upper back"
+      },
+      "pain-relief-options": {
+        "back": "Back",
+        "chest": "Chest",
+        "lower-arms": "Forearms",
+        "lower-legs": "Calves",
+        "neck": "Neck",
+        "shoulders": "Shoulders",
+        "upper-arms": "Arms",
+        "upper-legs": "Thighs",
+        "waist": "Waist"
+      },
+      "payment": {
+        "modal": {
+          "title": "Payment",
+          "tooltip": "Our payment is 100% secure, to protect your financial information we do not store credit card data or Pix transactions."
+        }
+      },
+      "steps": {
+        "step2": "Plans",
+        "step3": "Payment"
+      }
+    },
+    "plans": {
+      "base": "Base",
+      "baseDescription": "Basic plan for pelvic dysfunction.",
+      "performance": "Performance",
+      "performanceDescription": "Advanced plan for pelvic dysfunction.",
+      "master": "Master",
+      "masterDescription": "Complete plan for pelvic dysfunction.",
+      "simple": "Simple",
+      "simpleDescription": "You pay once, but if you want another sheet, you will have to buy it again.",
+      "athlete": "Athlete",
+      "athleteDescription": "You pay once, and receive a diet along with your training.",
+      "pro": "Pro",
+      "proDescription": "You pay once, and weekly, you will receive a new sheet.",
+      "termsAndConditions": "Check our terms and conditions of use."
+    },
+    "options": {
+      "recommended": "Recommended",
+      "comingSoon": "Coming soon",
+      "choose": "Choose",
+      "exclusiveSite": "Receive an exclusive site.",
+      "specializedDiet": "Specialized diet for you.",
+      "weeklyAutomaticDelivery": "Weekly automatic delivery.",
+      "executionGIFs": "Execution GIFs.",
+      "moreThan28Exercises": "+ than 28 exercises included.",
+      "moreThan18Exercises": "+ than 18 exercises included.",
+      "moreThan12Exercises": "+ than 12 exercises included."
+    },
+    "about-section": {
+      "description-1": "Founded in 2024, our company was born from a passion for sports and the vision of creating a supportive and guiding environment for those who want to start at the gym. Inspired by athletes and motivated to fill the gap of assistance for beginners, we developed a unique system of specialized training sheets and protocols, using artificial intelligence as an ally.",
+      "description-2": "Our goal is to offer personalized training, adapted to the needs and goals of each user, regardless of their level of experience. We want to make the path to health and well-being accessible and effective, providing continuous support adjusted to the evolution of each person."
+    },
+    "payment-step": {
+      "revise-infos": "Review the data before proceeding"
+    },
+    "services-section": {
+      "title": "Our services",
+      "cards": [
+        {
+          "title": "Personalized Training Sheets",
+          "description": "We create custom training sheets using artificial intelligence, adapted to your goals, whether it's muscle gain, weight loss, or physical conditioning. Each plan is adjusted according to your progress and goals."
+        },
+        {
+          "title": "Weight Loss Protocols",
+          "description": "We offer specialized weight loss protocols, combining aerobic and weight training to ensure you achieve your goals efficiently and healthily."
+        },
+        {
+          "title": "Physical Conditioning Training",
+          "description": "We develop sheets focused on physical conditioning, with varied exercises to improve your endurance, strength, and flexibility, providing a complete and effective workout."
+        },
+        {
+          "title": "Training for Sexual Dysfunctions",
+          "description": "Our specialized training service for sexual dysfunctions aims to improve sexual health and performance, with specific exercises to treat dysfunctions such as erectile dysfunction."
+        },
+        {
+          "title": "Hypertrophy Training",
+          "description": "We create specific training for muscle hypertrophy, with progression cycles and personalized loads to ensure consistent results in muscle gain."
+        },
+        {
+          "title": "Exclusive Diets with AI",
+          "description": "We use artificial intelligence to create personalized diets, adapted to your nutritional needs and goals, ensuring a balanced and healthy diet."
+        }
+      ]
+    },
+    "how-works-section": {
+      "title": "How it works?",
+      "card1title": "1. Form",
+      "card2title": "2. Plan",
+      "card3title": "3. Payment",
+      "card4title": "4. Site",
+      "card1": "Follow the steps and fill in the required fields.",
+      "card2": "Choose the plan that best fits your goal.",
+      "card3": "Make the payment 100% secure and fast.",
+      "card4": "Receive an exclusive site. Yes, the site will be 100% yours!"
+    },
+    "opinions-section": {
+      "title": "What they think about our services",
+      "cards": [
+        "AI personalizes my workouts and the results are amazing!",
+        "I improved my health and self-esteem with personalized workouts.",
+        "The weight loss protocols helped me achieve my goals quickly.",
+        "The training sheets are detailed and perfect for hypertrophy.",
+        "I've never had such an organized workout! I recommend it!"
+      ]
+    },
+    "confirmed-screen": {
+      "title": "Congratulations!",
+      "email": "Your exclusive site will also be sent to the registered email.",
+      "visit-site": "Visit site"
+    },
+    "training-site": {
+      "loading": "Loading...",
+      "hello": "Hello",
+      "myExercises": "My exercises",
+      "myDiet": "My diet",
+      "myInfo": "My information",
+      "exercises": "Exercises",
+      "diet": "Diet",
+      "info": "Information",
+      "day": "Day",
+      "noDietContent": "No diet content available.",
+      "name": "Name",
+      "age": "Age",
+      "height": "Height",
+      "weight": "Weight",
+      "bmi": "BMI",
+      "buttons": {
+        "reload-button": "Reload GIFs"
+      },
+      "filters": {
+        "muscleFilter": "Muscle filter",
+        "exerciseFilter": "Exercise filter"
+      },
+      "dietSection": {
+        "title": "Diet",
+        "recommended": "Recommendations",
+        "noRecommended": "No recommendations available.",
+        "mealExample": "Meal example",
+        "noMealExample": "No meal example available.",
+        "mainDish": "Main foods",
+        "noMainDish": "No main foods available."
+      },
+        "exercise": {
+        "series": "Sets",
+        "repetitions": "Reps",
+        "rest": "Rest",
+        "gifError": "GIFs may expire, click the reload button to display again."
+      }
+    },
+    "discord-section": {
+      "title": "Join our community",
+      "description": "Here you can interact, get in touch and we also provide free content.",
+      "button": "Access"
+    },
+    "contacts-section": {
+      "title": "Get in touch",
+      "description": "Do you need any of the services we offer or just want to say hi? Our inbox is open for you, we will do our best to respond!",
+      "button": "Schedule a coffee"
+    },
+    "footer": {
+      "copyrights": "All rights reserved to Intelligence Fit.",
+      "support": "Support"
+    }
+  }
+}

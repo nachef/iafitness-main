@@ -1,3 +1,4 @@
+import { t } from 'i18next'
 import Link from 'next/link'
 
 import Container from '@components/global/container'
@@ -19,19 +20,19 @@ const Navbar = () => {
           <nav className='hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2'>
             <ul className='flex items-center justify-center gap-8'>
               <Link href='#' className='hover:text-foreground/80 text-sm'>
-                Sobre nós
+                {t('header.about-us')}
               </Link>
               <Link href='#' className='hover:text-foreground/80 text-sm'>
-                Serviços
+                {t('header.services')}
               </Link>
               <Link href='#' className='hover:text-foreground/80 text-sm'>
-                Avalições
+                {t('header.testimonials')}
               </Link>
             </ul>
           </nav>
           <div className='flex items-center gap-4'>
             <Link href='/sign-up' className={buttonVariants({ size: 'sm', className: 'hidden md:flex' })}>
-              Linguagem
+              {t('header.language')}
             </Link>
           </div>
         </div>

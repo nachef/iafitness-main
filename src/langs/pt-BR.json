@@ -4,7 +4,8 @@
       "home": "Início",
       "about-us": "Sobre nós",
       "services": "Serviços",
-      "contacts": "Contato"
+      "testimonials": "Avaliações",
+      "language": "Idioma"
     },
     "main": {
       "title": "O futuro do seu corpo está aqui.",
@@ -286,7 +287,10 @@
     },
     "footer": {
       "copyrights": "Todos os direitos reservados a Intelligence Fit.",
-      "support": "Suporte"
+      "support": "Suporte",
+      "terms": "Termos de uso e condições",
+      "about-us": "Sobre nós",
+      "private-policy": "Política de privacidade"
     }
   }
 }

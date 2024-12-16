@@ -94,6 +94,16 @@
   background-color: hsl(var(--background));
 }
 
+.no-arrows::-webkit-outer-spin-button,
+  .no-arrows::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .no-arrows {
+    -moz-appearance: textfield;
+  }
+
 .dotPattern {
   background-image: radial-gradient(rgb(35, 40, 68) 1px, transparent 1px);
   background-size: 25px 25px;

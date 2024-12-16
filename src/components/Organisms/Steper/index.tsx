@@ -1,35 +1,70 @@
 import React from 'react'
 
-import { useTranslation } from 'react-i18next'
-import { FaAnglesLeft } from 'react-icons/fa6'
-import { useTheme } from 'styled-components'
+interface StepperProps {
+  steps: number
+  currentStep: number
+}
 
-import { Text } from '@components/Atoms/Text'
-
-import { StepLine, StepperContainer, StepText } from './styles'
-import { StepperProps } from './types'
-import useMediaQuery from '../../../hooks/useMediaQuery'
-
-export const Stepper: React.FC<StepperProps> = ({ currentStep, totalSteps, onClick, showBackButton }) => {
-  const theme = useTheme()
-  const { t } = useTranslation()
-  const isLargePhone = useMediaQuery('(max-width: 570px)')
-  const lineWidth = isLargePhone ? '66px' : '100px'
-
+const Stepper: React.FC<StepperProps> = ({ steps, currentStep }) => {
   return (
-    <StepperContainer>
-      {showBackButton && currentStep > 1 && (
-        <FaAnglesLeft color={theme.colors.basics.tertiary} cursor={'pointer'} onClick={onClick} />
-      )}
+    <div className='flex'>
+      {Array.from({ length: steps }, (_, index) => (
+        <div key={index} className='relative flex flex-col cursor-pointer'>
+          <div className='absolute rounded-lg ml-[10px]'>
+            {index >= currentStep && (
+              <span className={`text-xs font-semibold ${index < currentStep ? 'text-green-500' : 'text-neutral-500'}`}>
+                {index + 1}
+              </span>
+            )}
+          </div>
 
-      <StepLine width={lineWidth} isActive={currentStep >= 1} />
-      <StepLine width={lineWidth} isActive={currentStep >= 2} />
-      <StepLine width={lineWidth} isActive={currentStep >= 3} />
-      <StepText>
-        <Text color={''} font={'bold'} size={'small'}>
-          {currentStep === 2 ? t('generate-page.steps.step2') : currentStep === 3 ? t('generate-page.steps.step3') : ''}
-        </Text>
-      </StepText>
-    </StepperContainer>
+          <div className='flex items-center justify-center'>
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='26'
+              height='26'
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              strokeWidth='2'
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              className={`tabler-icon ${
+                index < currentStep
+                  ? 'tabler-icon-circle-check text-green-500'
+                  : 'tabler-icon-circle-dashed text-neutral-500'
+              }`}
+            >
+              {index < currentStep ? (
+                <>
+                  <path d='M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0'></path>
+                  <path d='M9 12l2 2l4 -4'></path>
+                </>
+              ) : (
+                <>
+                  <path d='M8.56 3.69a9 9 0 0 0 -2.92 1.95'></path>
+                  <path d='M3.69 8.56a9 9 0 0 0 -.69 3.44'></path>
+                  <path d='M3.69 15.44a9 9 0 0 0 1.95 2.92'></path>
+                  <path d='M8.56 20.31a9 9 0 0 0 3.44 .69'></path>
+                  <path d='M15.44 20.31a9 9 0 0 0 2.92 -1.95'></path>
+                  <path d='M20.31 15.44a9 9 0 0 0 .69 -3.44'></path>
+                  <path d='M20.31 8.56a9 9 0 0 0 -1.95 -2.92'></path>
+                  <path d='M15.44 3.69a9 9 0 0 0 -3.44 -.69'></path>
+                </>
+              )}
+            </svg>
+            {index < steps - 1 && (
+              <div className='w-2 lg:w-14 lg:px-1 rounded-full block'>
+                <div
+                  className={`w-full h-0.5 ${index < currentStep ? 'bg-green-500' : 'bg-neutral-500'} rounded-full`}
+                ></div>
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
   )
 }
+
+export default Stepper

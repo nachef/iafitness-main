@@ -98,8 +98,8 @@ export default function Forms() {
                       <div className='flex flex-col justify-center mt-4'>
                         <p className='text-gray-300 text-lg font-bold text-left mt-2 ml-8'>Dia 1</p>
                         <p className='text-gray-300 text-md text-left ml-8'>Costas e bíceps</p>
-                        <div className='flex flex-row gap-6 items-center justify-center mt-4'>
-                          <div className='flex flex-col items-center dark:bg-zinc-900 rounded-lg shadow-md p-4 w-[180px] h-[320px]'>
+                        <div className='flex flex-col md:flex-row gap-6 items-center justify-center mt-4'>
+                          <div className='flex flex-col items-center dark:bg-zinc-900 rounded-lg shadow-md p-4 w-[250px] h-[320px]'>
                             <Image
                               src='/assets/back.gif'
                               alt='Description of image'
@@ -123,7 +123,7 @@ export default function Forms() {
                               </div>
                             </div>
                           </div>
-                          <div className='flex flex-col items-center dark:bg-zinc-900 rounded-lg shadow-md p-4 w-[180px] h-[320px]'>
+                          <div className='flex flex-col items-center dark:bg-zinc-900 rounded-lg shadow-md p-4 w-[250px] h-[320px]'>
                             <Image
                               src='/assets/biceps.gif'
                               alt='Description of image'

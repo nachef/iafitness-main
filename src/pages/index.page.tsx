@@ -4,6 +4,7 @@ import React from 'react'
 
 import { t } from 'i18next'
 import { ArrowRight, ChevronRight, UserIcon } from 'lucide-react'
+import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -26,6 +27,9 @@ export default function Home() {
 
   return (
     <div className='flex flex-col items-center w-full'>
+      <Head>
+        <title>Intelligence Fit</title>
+      </Head>
       <Navbar />
       <section className='w-full relative flex items-center justify-center flex-col px-4 md:px-0 py-8'>
         {/* Hero */}

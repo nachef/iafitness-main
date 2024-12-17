@@ -1,63 +1,108 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState } from 'react'
 
-import { t } from 'i18next'
+import { validateEmail } from '../utils/helpers/formatters'
 
-import { runGenerativeAI } from '../services/api/RunGemini'
-import i18n from '../utils/helpers/i18n'
+interface FormData {
+  name: string
+  email: string
+  age: string
+  weight: string
+  height: string
+  sex: string
+  goal: string
+  days: number
+}
 
 interface FormContextProps {
-  formData: any
-  setFormData: (data: any) => void
-  muscleGroupOptions: { label: string; value: string }[]
+  formData: FormData
+  setFormData: React.Dispatch<React.SetStateAction<FormData>>
+  currentStep: number
+  setCurrentStep: React.Dispatch<React.SetStateAction<number>>
+  handleNextStep: () => void
+  handlePreviousStep: () => void
+  handleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  isStepCompleted: (step: number) => boolean
 }
 
 const FormContext = createContext<FormContextProps | undefined>(undefined)
 
-export const FormProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [formData, setFormData] = useState<any>({})
-  let muscleGroupOptions = []
-  if (formData.goal === t('generate-page.radio-options.pain-relief')) {
-    muscleGroupOptions = [
-      { label: t('generate-page.pain-relief-options.back'), value: 'back' },
-      { label: t('generate-page.pain-relief-options.chest'), value: 'chest' },
-      { label: t('generate-page.pain-relief-options.lower-arms'), value: 'lower arms' },
-      { label: t('generate-page.pain-relief-options.lower-legs'), value: 'lower legs' },
-      { label: t('generate-page.pain-relief-options.shoulders'), value: 'shoulders' },
-      { label: t('generate-page.pain-relief-options.upper-arms'), value: 'upper arms' },
-      { label: t('generate-page.pain-relief-options.upper-legs'), value: 'upper legs' },
-      { label: t('generate-page.pain-relief-options.waist'), value: 'waist' },
-    ]
-  } else {
-    muscleGroupOptions = [
-      { label: t('generate-page.radio-options.abductors'), value: 'abductors' },
-      { label: t('generate-page.radio-options.abs'), value: 'abs' },
-      { label: t('generate-page.radio-options.adductors'), value: 'adductors' },
-      { label: t('generate-page.radio-options.biceps'), value: 'biceps' },
-      { label: t('generate-page.radio-options.calves'), value: 'calves' },
-      { label: t('generate-page.radio-options.cardiovascular-system'), value: 'cardiovascular system' },
-      { label: t('generate-page.radio-options.delts'), value: 'delts' },
-      { label: t('generate-page.radio-options.forearms'), value: 'forearms' },
-      { label: t('generate-page.radio-options.glutes'), value: 'glutes' },
-      { label: t('generate-page.radio-options.hamstrings'), value: 'hamstrings' },
-      { label: t('generate-page.radio-options.lats'), value: 'lats' },
-      { label: t('generate-page.radio-options.levator-scapulae'), value: 'levator scapulae' },
-      { label: t('generate-page.radio-options.pectorals'), value: 'pectorals' },
-      { label: t('generate-page.radio-options.quads'), value: 'quads' },
-      { label: t('generate-page.radio-options.serratus-anterior'), value: 'serratus anterior' },
-      { label: t('generate-page.radio-options.spine'), value: 'spine' },
-      { label: t('generate-page.radio-options.traps'), value: 'traps' },
-      { label: t('generate-page.radio-options.triceps'), value: 'triceps' },
-      { label: t('generate-page.radio-options.upper-back'), value: 'upper back' },
-    ]
-  }
-
-  return <FormContext.Provider value={{ formData, setFormData, muscleGroupOptions }}>{children}</FormContext.Provider>
-}
-
-export const useForm = () => {
+export const useFormContext = () => {
   const context = useContext(FormContext)
   if (!context) {
-    throw new Error('useForm must be used within a FormProvider')
+    throw new Error('useFormContext must be used within a FormProvider')
   }
   return context
+}
+
+export const FormProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    age: '',
+    weight: '',
+    height: '',
+    sex: '',
+    goal: '',
+    days: 0,
+  })
+
+  const [currentStep, setCurrentStep] = useState(1)
+
+  useEffect(() => {
+    const savedFormData = localStorage.getItem('formData')
+    if (savedFormData) {
+      setFormData(JSON.parse(savedFormData))
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem('formData', JSON.stringify(formData))
+  }, [formData])
+
+  const handleNextStep = () => {
+    if (isStepCompleted(currentStep)) {
+      setCurrentStep(prevStep => Math.min(prevStep + 1, 4))
+    }
+  }
+
+  const handlePreviousStep = () => {
+    setCurrentStep(prevStep => Math.max(prevStep - 1, 1))
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target
+    setFormData(prevData => ({ ...prevData, [name]: value }))
+  }
+
+  const isStepCompleted = (step: number) => {
+    switch (step) {
+      case 1:
+        return !!formData.goal
+      case 2:
+        return !!formData.name && validateEmail(formData.email)
+      case 3:
+        return !!formData.age && !!formData.weight && !!formData.height && !!formData.sex
+      case 4:
+        return !!formData.days
+      default:
+        return true
+    }
+  }
+
+  return (
+    <FormContext.Provider
+      value={{
+        formData,
+        setFormData,
+        currentStep,
+        setCurrentStep,
+        handleNextStep,
+        handlePreviousStep,
+        handleInputChange,
+        isStepCompleted,
+      }}
+    >
+      {children}
+    </FormContext.Provider>
+  )
 }

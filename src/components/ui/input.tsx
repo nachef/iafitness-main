@@ -5,6 +5,33 @@ import { cn } from '../../lib/utils'
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(({ className, type, ...props }, ref) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (
+      type === 'number' &&
+      (e.key === 'e' || e.key === 'E' || e.key === '+' || e.key === '-' || e.key === '.' || e.key === ',')
+    ) {
+      e.preventDefault()
+    }
+  }
+
+  const handlePaste = (e: React.ClipboardEvent<HTMLInputElement>) => {
+    if (type === 'number') {
+      const paste = e.clipboardData.getData('text')
+      if (/[eE\+\-.,]/.test(paste)) {
+        e.preventDefault()
+      }
+    }
+  }
+
+  const handleDrop = (e: React.DragEvent<HTMLInputElement>) => {
+    if (type === 'number') {
+      const text = e.dataTransfer.getData('text')
+      if (/[eE\+\-.,]/.test(text)) {
+        e.preventDefault()
+      }
+    }
+  }
+
   return (
     <input
       type={type}
@@ -14,6 +41,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(({ className, type,
         className,
       )}
       ref={ref}
+      onKeyDown={handleKeyDown}
+      onPaste={handlePaste}
+      onDrop={handleDrop}
       {...props}
     />
   )

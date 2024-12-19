@@ -2,7 +2,6 @@ import React from 'react'
 
 import { ArrowLeft, ArrowRight } from 'lucide-react'
 import Head from 'next/head'
-import Image from 'next/image'
 
 import Container from '@components/global/container'
 import Wrapper from '@components/global/wrapper'
@@ -17,6 +16,7 @@ import Step1 from './steps/Step1'
 import Step2 from './steps/Step2'
 import Step3 from './steps/Step3'
 import Step4 from './steps/Step4'
+import { Preview } from '../components/preview'
 
 const stepTitles = ['Objetivo', 'Nome e Email', 'Características', 'Dias de Treino']
 
@@ -83,76 +83,7 @@ export default function Forms() {
                 </div>
               </div>
               <div className='w-full lg:w-1/2 h-full'>
-                <div className='relative no-scrollbar overflow-x-hidden w-full min-h-screen lg:min-h-[85vh] lg:h-[85vh] lg:max-h-[85vh] rounded-lg bg--primary shadow-black'>
-                  <div className='bg-transparent'></div>
-                  <div className='absolute z-50 w-full items-center justify-center lg:text-center text-right bg-white rounded-t-lg p-3'>
-                    <p className='text-xs text-neutral-900 mt-[1.5px]'>https://intelligencefit.com/training/</p>
-                    <div className='absolute top-4 left-4 w-3 h-3 rounded-full bg-red-500'></div>
-                    <div className='absolute top-4 left-8 w-3 h-3 rounded-full bg-yellow-500'></div>
-                    <div className='absolute top-4 left-12 w-3 h-3 rounded-full bg-green-500'></div>
-                  </div>
-                  <div className='relative container h-full mt-14 bg--primary lg:bg--primary z-40'>
-                    <div className='rounded-lg h-full'>
-                      <Navbar preview={true} name={formData.name || 'Intelligence Fit'} />
-
-                      <div className='flex flex-col justify-center mt-4'>
-                        <p className='text-gray-300 text-lg font-bold text-left mt-2 ml-8'>Dia 1</p>
-                        <p className='text-gray-300 text-md text-left ml-8'>Costas e bíceps</p>
-                        <div className='flex flex-col md:flex-row gap-6 items-center justify-center mt-4'>
-                          <div className='flex flex-col items-center dark:bg-zinc-900 rounded-lg shadow-md p-4 w-[250px] h-[320px]'>
-                            <Image
-                              src='/assets/back.gif'
-                              alt='Description of image'
-                              width={100}
-                              height={100}
-                              className='object-cover rounded-lg'
-                            />
-                            <div className='text-center mt-4'>
-                              <h2 className='text-md font-bold dark:text-neutral-100'>Puxada alta com barra máquina</h2>
-                              <div className='mt-2'>
-                                <p className='text-sm text-neutral-600 dark:text-neutral-400'>Repetições</p>
-                                <p className='text-sm dark:text-neutral-400'>12</p>
-                              </div>
-                              <div className='mt-2'>
-                                <p className='text-sm text-neutral-600 dark:text-neutral-400'>Séries</p>
-                                <p className='text-sm dark:text-neutral-400'>4</p>
-                              </div>
-                              <div className='mt-2'>
-                                <p className='text-sm text-neutral-600 dark:text-neutral-400'>Descanso</p>
-                                <p className='text-sm dark:text-neutral-400'>40 segundos</p>
-                              </div>
-                            </div>
-                          </div>
-                          <div className='flex flex-col items-center dark:bg-zinc-900 rounded-lg shadow-md p-4 w-[250px] h-[320px]'>
-                            <Image
-                              src='/assets/biceps.gif'
-                              alt='Description of image'
-                              width={100}
-                              height={100}
-                              className='object-cover rounded-lg'
-                            />
-                            <div className='text-center mt-4'>
-                              <h2 className='text-md font-bold dark:text-neutral-100'>Bíceps alternado com halteres</h2>
-                              <div className='mt-2'>
-                                <p className='text-sm text-neutral-600 dark:text-neutral-400'>Repetições</p>
-                                <p className='text-sm dark:text-neutral-400'>12</p>
-                              </div>
-                              <div className='mt-2'>
-                                <p className='text-sm text-neutral-600 dark:text-neutral-400'>Séries</p>
-                                <p className='text-sm dark:text-neutral-400'>4</p>
-                              </div>
-                              <div className='mt-2'>
-                                <p className='text-sm text-neutral-600 dark:text-neutral-400'>Descanso</p>
-                                <p className='text-sm dark:text-neutral-400'>40 segundos</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className='h-72'></div>
-                </div>
+                <Preview />
               </div>
             </div>
           </Container>

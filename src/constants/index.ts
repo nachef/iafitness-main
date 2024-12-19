@@ -145,3 +145,54 @@ export const reviews = [
     body: "I'm at a loss for words. This is amazing. I love it.",
   },
 ]
+
+export const hypertrophyExercises = [
+  {
+    image: '/assets/back.gif',
+    title: 'Puxada alta com barra máquina',
+    reps: '12',
+    sets: '4',
+    rest: '50 segundos',
+  },
+  {
+    image: '/assets/biceps.gif',
+    title: 'Bíceps alternado com halteres',
+    reps: '12',
+    sets: '4',
+    rest: '40 segundos',
+  },
+]
+
+export const weightLossExercises = [
+  {
+    image: '/assets/run.gif',
+    title: 'Corrida na esteira',
+    reps: '30 minutos',
+    sets: '-',
+    rest: '-',
+  },
+  {
+    image: '/assets/abs.gif',
+    title: 'Abdominais',
+    reps: '15',
+    sets: '3',
+    rest: '30 segundos',
+  },
+]
+
+export const sexualDysfunctionExercises = [
+  {
+    image: '/assets/pelvic.gif',
+    title: 'Elevaçao pélvica',
+    reps: '10',
+    sets: '3',
+    rest: '30 segundos',
+  },
+  {
+    image: '/assets/pelvic2.gif',
+    title: 'Abdominal "Crunch"',
+    reps: '15',
+    sets: '3',
+    rest: '30 segundos',
+  },
+]

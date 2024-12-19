@@ -6,7 +6,7 @@ interface Step4Props {
 }
 
 const Step4: React.FC<Step4Props> = ({ formData, handleInputChange }) => {
-  const [selectedDays, setSelectedDays] = useState<number>(formData.days || 0)
+  const [selectedDays, setSelectedDays] = useState<number>(formData?.days || 0)
 
   const handleSelect = (days: number) => {
     setSelectedDays(days)

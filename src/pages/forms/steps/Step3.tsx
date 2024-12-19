@@ -22,7 +22,7 @@ const handleInputChangeWithLimit = (
 }
 
 const Step3: React.FC<Step3Props> = ({ formData, handleInputChange }) => {
-  const [selectedSex, setSelectedSex] = useState(formData.sex || '')
+  const [selectedSex, setSelectedSex] = useState(formData?.sex || '')
 
   const handleSelectSex = (sex: string) => {
     setSelectedSex(sex)
@@ -37,7 +37,7 @@ const Step3: React.FC<Step3Props> = ({ formData, handleInputChange }) => {
           placeholder='Idade'
           type='number'
           name='age'
-          value={formData.age}
+          value={formData?.age}
           onChange={handleInputChangeWithLimit(handleInputChange, 2)}
         />
       </LabelInputContainer>
@@ -47,7 +47,7 @@ const Step3: React.FC<Step3Props> = ({ formData, handleInputChange }) => {
           placeholder='Peso'
           type='number'
           name='weight'
-          value={formData.weight}
+          value={formData?.weight}
           onChange={handleInputChangeWithLimit(handleInputChange, 3)}
         />
       </LabelInputContainer>
@@ -57,7 +57,7 @@ const Step3: React.FC<Step3Props> = ({ formData, handleInputChange }) => {
           placeholder='Altura'
           type='number'
           name='height'
-          value={formData.height}
+          value={formData?.height}
           onChange={handleInputChangeWithLimit(handleInputChange, 3)}
         />
       </LabelInputContainer>

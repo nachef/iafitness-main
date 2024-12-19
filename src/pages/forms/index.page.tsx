@@ -4,10 +4,11 @@ import { ArrowLeft, ArrowRight } from 'lucide-react'
 import Head from 'next/head'
 
 import Container from '@components/global/container'
+import Preview from '@components/global/preview'
+import Stepper from '@components/global/Steper'
 import Wrapper from '@components/global/wrapper'
 import Footer from '@components/home/navigation/footer'
 import Navbar from '@components/home/navigation/navbar'
-import Stepper from '@components/Organisms/Steper'
 import { Button } from '@components/ui/button'
 
 import { useFormContext } from '@contexts/FormContext'
@@ -16,7 +17,6 @@ import Step1 from './steps/Step1'
 import Step2 from './steps/Step2'
 import Step3 from './steps/Step3'
 import Step4 from './steps/Step4'
-import { Preview } from '../components/preview'
 
 const stepTitles = ['Objetivo', 'Nome e Email', 'Características', 'Dias de Treino']
 

@@ -3,7 +3,6 @@ import { useEffect } from 'react'
 import i18n from 'i18next'
 import type { AppProps } from 'next/app'
 
-import { Footer } from '../components/Organisms/Footer'
 import { FormProvider } from '../contexts/FormContext'
 import { PaymentProvider } from '../contexts/PaymentContext'
 import { TrainingSiteProvider } from '../contexts/TrainingSite/TrainingSiteContext'

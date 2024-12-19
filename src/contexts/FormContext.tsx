@@ -51,7 +51,13 @@ export const FormProvider: React.FC<{ children: React.ReactNode }> = ({ children
   useEffect(() => {
     const savedFormData = localStorage.getItem('formData')
     if (savedFormData) {
-      setFormData(JSON.parse(savedFormData))
+      try {
+        const parsedData = JSON.parse(savedFormData)
+        setFormData(parsedData)
+      } catch (error) {
+        console.error('Erro ao carregar dados do Local Storage:', error)
+        localStorage.removeItem('formData')
+      }
     }
   }, [])
 
@@ -77,15 +83,20 @@ export const FormProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const isStepCompleted = (step: number) => {
     switch (step) {
       case 1:
-        return !!formData.goal
+        return formData.goal.trim() !== ''
       case 2:
-        return !!formData.name && validateEmail(formData.email)
+        return formData.name.trim() !== '' && validateEmail(formData.email.trim())
       case 3:
-        return !!formData.age && !!formData.weight && !!formData.height && !!formData.sex
+        return (
+          formData.age.trim() !== '' &&
+          formData.weight.trim() !== '' &&
+          formData.height.trim() !== '' &&
+          formData.sex.trim() !== ''
+        )
       case 4:
-        return !!formData.days
+        return formData.days > 0
       default:
-        return true
+        return false
     }
   }
 

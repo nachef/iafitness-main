@@ -27,11 +27,11 @@ const Step2: React.FC<Step2Props> = ({ formData, handleInputChange }) => {
     <>
       <LabelInputContainer>
         <Label htmlFor='name'>Nome</Label>
-        <Input placeholder='Nome' type='text' name='name' value={formData.name} onChange={handleInputChange} />
+        <Input placeholder='Nome' type='text' name='name' value={formData?.name} onChange={handleInputChange} />
       </LabelInputContainer>
       <LabelInputContainer>
         <Label htmlFor='email'>Email</Label>
-        <Input placeholder='Email' type='text' name='email' value={formData.email} onChange={handleEmailChange} />
+        <Input placeholder='Email' type='text' name='email' value={formData?.email} onChange={handleEmailChange} />
         {emailError && <p className='text-red-500 text-sm'>{emailError}</p>}
       </LabelInputContainer>
     </>

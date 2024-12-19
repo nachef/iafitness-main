@@ -8,7 +8,7 @@ import { useFormContext } from '@contexts/FormContext'
 
 import { hypertrophyExercises, sexualDysfunctionExercises, weightLossExercises } from '../../constants/index'
 
-export const Preview = () => {
+const Preview = () => {
   const { formData } = useFormContext()
 
   const getTitle = () => {
@@ -87,10 +87,10 @@ export const Preview = () => {
               ) : (
                 <>
                   <div className='flex flex-col items-center dark:bg-zinc-900 rounded-lg shadow-md p-4 w-[200px] h-[320px]'>
-                    <div className='w-full h-full'></div>
+                    <div className='w-full h-full bg-gray-300 animate-pulse rounded-lg'></div>
                   </div>
                   <div className='flex flex-col items-center dark:bg-zinc-900 rounded-lg shadow-md p-4 w-[200px] h-[320px]'>
-                    <div className='w-full h-full'></div>
+                    <div className='w-full h-full bg-gray-300 animate-pulse rounded-lg'></div>
                   </div>
                 </>
               )}
@@ -102,3 +102,5 @@ export const Preview = () => {
     </div>
   )
 }
+
+export default Preview

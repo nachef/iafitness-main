@@ -6,7 +6,7 @@ interface Step1Props {
 }
 
 const Step1: React.FC<Step1Props> = ({ formData, handleInputChange }) => {
-  const [selectedGoal, setSelectedGoal] = useState(formData.goal || '')
+  const [selectedGoal, setSelectedGoal] = useState(formData?.goal || '')
 
   const handleSelect = (goal: string) => {
     setSelectedGoal(goal)

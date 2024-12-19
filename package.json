@@ -14,7 +14,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest -u",
+    "test": "jest --passWithNoTests",
     "prepare": "husky install",
     "prettier": "prettier --write \"src/**/*.{ts,tsx}\"",
     "lint-staged": "lint-staged",

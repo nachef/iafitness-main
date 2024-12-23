@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+
+import { motion } from 'framer-motion'
 
 import { Input } from '../../../components/ui/input'
 import { Label } from '../../../components/ui/label'
@@ -23,6 +25,17 @@ const handleInputChangeWithLimit = (
 
 const Step3: React.FC<Step3Props> = ({ formData, handleInputChange }) => {
   const [selectedSex, setSelectedSex] = useState(formData?.sex || '')
+  const [bmi, setBmi] = useState<string | null>(null)
+
+  useEffect(() => {
+    if (formData.weight && formData.height) {
+      const heightInMeters = parseFloat(formData.height) / 100
+      const bmiValue = (parseFloat(formData.weight) / (heightInMeters * heightInMeters)).toFixed(2)
+      setBmi(bmiValue)
+    } else {
+      setBmi(null)
+    }
+  }, [formData.weight, formData.height])
 
   const handleSelectSex = (sex: string) => {
     setSelectedSex(sex)
@@ -60,6 +73,16 @@ const Step3: React.FC<Step3Props> = ({ formData, handleInputChange }) => {
           value={formData?.height}
           onChange={handleInputChangeWithLimit(handleInputChange, 3)}
         />
+        {bmi && (
+          <motion.span
+            className='ml-4'
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Seu IMC é: {bmi}
+          </motion.span>
+        )}
       </LabelInputContainer>
       <div className='flex flex-col items-center gap-6'>
         <p className='text-base md:text-lg text-foreground/80 mb-2 text-center'>Selecione seu sexo</p>

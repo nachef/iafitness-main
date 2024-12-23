@@ -50,7 +50,7 @@ export default function Home() {
                 </span>
               </button>
 
-              <div className='flex flex-col items-center mt-8 max-w-3xl w-11/12 md:w-full'>
+              <div className='flex flex-col items-center justify-center mt-8 max-w-3xl w-11/12 md:w-full'>
                 <h1 className='text-4xl md:text-6xl lg:textxl md:!leading-snug font-semibold text-center bg-clip-text bg-gradient-to-b from-gray-50 to-gray-50 text-transparent'>
                   {t('main.title')}
                 </h1>
@@ -58,16 +58,13 @@ export default function Home() {
                   Sem enrolação, sem desculpas, sem limites. A inteligência artificial que vai te ajudar a alcançar o
                   corpo e a mente dos seus sonhos.
                 </p>
-                <div className='hidden md:flex relative items-center justify-center mt-8 md:mt-12 w-full'>
+                <div className='flex relative items-center justify-center mt-8 md:mt-12 w-full'>
                   <Link
                     href='/forms'
                     className='flex items-center justify-center w-max rounded-full border-t border-foreground/30 bg-white/20 backdrop-blur-lg px-2 py-1 md:py-2 gap-2 md:gap-8 shadow-3xl shadow-background/40 cursor-pointer select-none'
                   >
-                    <p className='text-foreground text-sm text-center md:text-base font-medium pl-4 pr-4 lg:pr-0'>
-                      ✨ {'  '} Comece um novo ciclo aqui!
-                    </p>
-                    <Button size='sm' className='rounded-full hidden lg:flex border border-foreground/20'>
-                      Me leve até lá
+                    <Button size='sm' className='rounded-full lg:flex border border-foreground/20'>
+                      Quero mudar minha vida!
                       <ArrowRight className='w-4 h-4 ml-1' />
                     </Button>
                   </Link>
@@ -76,18 +73,6 @@ export default function Home() {
 
               <div className='relative flex items-center py-10 md:py-20 w-full'>
                 <div className='absolute top-1/2 left-1/2 -z-10 gradient w-3/4 -translate-x-1/2 h-3/4 -translate-y-1/2 inset-0 blur-[10rem]'></div>
-                <div className='-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl'>
-                  <Image
-                    src='/assets/dashboard.svg'
-                    alt='banner image'
-                    width={1200}
-                    height={1200}
-                    quality={100}
-                    className='rounded-md lg:rounded-xl bg-foreground/10 shadow-2xl ring-1 ring-border'
-                  />
-
-                  <BorderBeam size={250} duration={12} delay={9} />
-                </div>
               </div>
             </div>
           </Container>

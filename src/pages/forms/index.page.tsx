@@ -74,7 +74,7 @@ export default function Forms() {
                       variant={'outline'}
                       size={'lg'}
                       onClick={handleNextStep}
-                      disabled={!isStepCompleted(currentStep) || currentStep === 4}
+                      disabled={!isStepCompleted(currentStep)}
                     >
                       Próximo
                       <ArrowRight className='w-4 h-4 ml-2' />

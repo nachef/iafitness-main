@@ -2,6 +2,8 @@ import { t } from 'i18next'
 
 import Icons from '../components/global/icons'
 
+export const BASE_URL = 'https://intelligencefit.com/api'
+
 export const perks = [
   {
     icon: Icons.auth,
@@ -195,4 +197,13 @@ export const sexualDysfunctionExercises = [
     sets: '3',
     rest: '30 segundos',
   },
+]
+
+export const stepTitles = ['Objetivo', 'Nome e Email', 'Características', 'Dias de Treino']
+
+export const stepDescriptions = [
+  'Escolha o que você tem como foco principal em seu corpo!',
+  'Calma, não precisa por seu nome real se não quiser, porém o email precisa ser válido para enviarmos seu site!',
+  'Coloque suas características físicas para que possamos montar um treino personalizado para você!',
+  'Precisamos saber um pouco mais sobre sua rotina de treino para montar um planejamento que se encaixe nela!',
 ]

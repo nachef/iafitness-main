@@ -17,15 +17,7 @@ import Step1 from './steps/Step1'
 import Step2 from './steps/Step2'
 import Step3 from './steps/Step3'
 import Step4 from './steps/Step4'
-
-const stepTitles = ['Objetivo', 'Nome e Email', 'Características', 'Dias de Treino']
-
-const stepDescriptions = [
-  'Escolha o que você tem como foco principal em seu corpo!',
-  'Calma, não precisa por seu nome real se não quiser, porém o email precisa ser válido para enviarmos seu site!',
-  'Coloque suas características físicas para que possamos montar um treino personalizado para você!',
-  'Precisamos saber um pouco mais sobre sua rotina de treino para montar um planejamento que se encaixe nela!',
-]
+import { stepDescriptions, stepTitles } from '../../constants'
 
 export default function Forms() {
   const { formData, currentStep, handleNextStep, handlePreviousStep, handleInputChange, isStepCompleted } =

@@ -1,3 +1,5 @@
+import { BASE_URL } from '../../../constants'
+
 interface PaymentDetails {
   email: string
   cpf: string
@@ -9,7 +11,7 @@ interface PaymentDetails {
 export const createPayment = async ({ email, cpf, title, price, purchaseId }: PaymentDetails) => {
   try {
     const cleanedCpf = cpf.replace(/\D/g, '')
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/create-payment`, {
+    const response = await fetch(`${BASE_URL}/api/create-payment`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

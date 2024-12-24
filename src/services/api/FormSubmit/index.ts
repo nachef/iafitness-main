@@ -1,6 +1,8 @@
+import { BASE_URL } from '../../../constants'
+
 export const saveUserForm = async (formData: any, plan: any) => {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/save-form`, {
+    const response = await fetch(`${BASE_URL}/api/save-form`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -32,7 +34,7 @@ export const handleSubmitForm = async () => {
     const { name, age, sex, trainingType, weakPoint, goal, days } = JSON.parse(formData)
     const email = getEmail
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/generate-content`, {
+    const res = await fetch(`${BASE_URL}/api/generate-content`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -42,7 +42,7 @@ const Preview = () => {
   return (
     <div className='relative no-scrollbar overflow-x-hidden w-full min-h-screen lg:min-h-[85vh] lg:h-[85vh] lg:max-h-[85vh] rounded-lg bg--primary shadow-black'>
       <div className='bg-transparent'></div>
-      <div className='absolute z-50 w-full items-center justify-center lg:text-center text-right bg-white rounded-t-lg p-3'>
+      <div className='absolute z-10 w-full items-center justify-center lg:text-center text-right bg-white rounded-t-lg p-3'>
         <p className='text-xs text-neutral-900 mt-[1.5px]'>https://intelligencefit.com/training/{slug}</p>
         <div className='absolute top-4 left-4 w-3 h-3 rounded-full bg-red-500'></div>
         <div className='absolute top-4 left-8 w-3 h-3 rounded-full bg-yellow-500'></div>

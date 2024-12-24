@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 import { motion } from 'framer-motion'
+import { GoQuestion } from 'react-icons/go'
 
 import { Input } from '../../../components/ui/input'
 import { Label } from '../../../components/ui/label'
@@ -26,6 +27,15 @@ const handleInputChangeWithLimit = (
 const Step3: React.FC<Step3Props> = ({ formData, handleInputChange }) => {
   const [selectedSex, setSelectedSex] = useState(formData?.sex || '')
   const [bmi, setBmi] = useState<string | null>(null)
+  const [tooltipVisible, setTooltipVisible] = useState(false)
+
+  const handleMouseEnter = () => {
+    setTooltipVisible(true)
+  }
+
+  const handleMouseLeave = () => {
+    setTooltipVisible(false)
+  }
 
   useEffect(() => {
     if (formData.weight && formData.height) {
@@ -74,14 +84,31 @@ const Step3: React.FC<Step3Props> = ({ formData, handleInputChange }) => {
           onChange={handleInputChangeWithLimit(handleInputChange, 3)}
         />
         {bmi && (
-          <motion.span
-            className='ml-4'
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            Seu IMC é: {bmi}
-          </motion.span>
+          <div className='flex flex-row items-center gap-2'>
+            <motion.span
+              className='ml-4'
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              Seu IMC é: {bmi}
+            </motion.span>
+            <div className='relative inline-block'>
+              <GoQuestion onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='cursor-pointer' />
+              {tooltipVisible && (
+                <div
+                  role='tooltip'
+                  className='w-60 absolute z-10 inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-100 dark:bg-gray-700'
+                  style={{ top: '30px', left: '50%', transform: 'translateX(-50%)' }}
+                >
+                  O IMC (Índice de Massa Corporal) é uma medida usada para avaliar se uma pessoa está em um peso
+                  saudável em relação à sua altura. É calculado dividindo o peso (em kg) pela altura ao quadrado (em
+                  metros).
+                  <div className='tooltip-arrow' data-popper-arrow></div>
+                </div>
+              )}
+            </div>
+          </div>
         )}
       </LabelInputContainer>
       <div className='flex flex-col items-center gap-6'>

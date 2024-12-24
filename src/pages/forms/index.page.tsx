@@ -17,6 +17,7 @@ import Step1 from './steps/Step1'
 import Step2 from './steps/Step2'
 import Step3 from './steps/Step3'
 import Step4 from './steps/Step4'
+import Step5 from './steps/Step5'
 import { stepDescriptions, stepTitles } from '../../constants'
 
 export default function Forms() {
@@ -33,6 +34,8 @@ export default function Forms() {
         return <Step3 formData={formData} handleInputChange={handleInputChange} />
       case 4:
         return <Step4 formData={formData} handleInputChange={handleInputChange} />
+      case 5:
+        return <Step5 />
       default:
         return <Step1 formData={formData} handleInputChange={handleInputChange} />
     }
@@ -50,7 +53,7 @@ export default function Forms() {
           <Container>
             <div className='flex flex-col lg:flex-row items-center lg:items-start justify-center py-10 h-full w-full lg:gap-24 gap-12'>
               <div className='flex flex-col items-center justify-start w-full md:w-2/3'>
-                <Stepper steps={4} currentStep={currentStep - 1} />
+                <Stepper steps={5} currentStep={currentStep - 1} />
                 <div className='relative flex items-center flex-col py-10 md:py-20 w-full gap-5'>
                   <p className='text-3xl md:text-3xl font-bold text-neutral-100'>{stepTitles[currentStep - 1]}</p>
                   <p className='text-base md:text-lg text-foreground/80 mb-2 text-center'>

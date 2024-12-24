@@ -67,7 +67,7 @@ export const FormProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const handleNextStep = () => {
     if (isStepCompleted(currentStep)) {
-      setCurrentStep(prevStep => Math.min(prevStep + 1, 4))
+      setCurrentStep(prevStep => Math.min(prevStep + 1, 5))
     }
   }
 
@@ -94,7 +94,9 @@ export const FormProvider: React.FC<{ children: React.ReactNode }> = ({ children
           formData.sex.trim() !== ''
         )
       case 4:
-        return formData.days > 0
+        return formData.days !== 0
+      case 5:
+        return true
       default:
         return false
     }

@@ -199,11 +199,12 @@ export const sexualDysfunctionExercises = [
   },
 ]
 
-export const stepTitles = ['Objetivo', 'Nome e Email', 'Características', 'Dias de Treino']
+export const stepTitles = ['Objetivo', 'Nome e Email', 'Características', 'Dias de Treino', 'Planos']
 
 export const stepDescriptions = [
   'Escolha o que você tem como foco principal em seu corpo!',
   'Calma, não precisa por seu nome real se não quiser, porém o email precisa ser válido para enviarmos seu site!',
   'Coloque suas características físicas para que possamos montar um treino personalizado para você!',
   'Precisamos saber um pouco mais sobre sua rotina de treino para montar um planejamento que se encaixe nela!',
+  'Escolha o plano que mais se encaixa com você e seu bolso!',
 ]
